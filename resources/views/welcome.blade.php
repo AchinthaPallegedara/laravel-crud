@@ -12,9 +12,23 @@
 
          @vite( "resources/css/app.css", "resources/scss/app.scss", "resources/js/app.js",)
     </head>
-   <body>
-    <h1 class="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+   <body class="container mx-auto mt-10">
+    <div class="flex justify-between items-center mb-4">
+        <h1 class="text-3xl font-bold">Product Page - Resuable component</h1>
+        <button>
+            <a href="{{ route('product.index') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-3xl">
+                Product table
+            </a>
+        </button>
+    </div>
+
+
+    <div class="grid grid-cols-4 gap-4 mt-10">
+
+        @foreach ($products as $product)
+
+        <x-product-card :product="$product"/>
+        @endforeach
+    </div>
    </body>
 </html>

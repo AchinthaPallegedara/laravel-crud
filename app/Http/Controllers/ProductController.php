@@ -7,6 +7,10 @@ use App\Models\Product;
 
 class ProductController extends Controller
 {
+    public function main(){
+        $products = Product::all();
+        return view('welcome', ['products' => $products]);
+    }
     public function index()
     {
         $products = Product::all();

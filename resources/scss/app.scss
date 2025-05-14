@@ -1,0 +1,194 @@
+// Reset some basic elements for consistency
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+// Base styles
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5rem; // mt-10
+    padding: 0 1rem;
+}
+
+// Product header
+.product-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2.5rem; // mb-10
+    width: 100%;
+    padding: 0.5rem 0;
+
+    h1 {
+        font-weight: bold;
+        font-size: 3rem; // text-5xl
+        color: #111827;
+        margin: 0;
+    }
+}
+
+// Create button
+.create-button {
+    padding: 0.5rem 1rem; // py-2 px-4
+    cursor: pointer;
+    background-color: #1e40af; // bg-blue-800
+    color: white;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05); // shadow-lg
+    border-radius: 2rem; // rounded-4xl
+
+    &:hover {
+        background-color: #1d4ed8; // bg-blue-700
+    }
+
+    a {
+        font-size: 1.125rem; // text-lg
+        color: white;
+        text-decoration: none;
+    }
+}
+
+// Toast notification
+.toast {
+    position: fixed;
+    top: 1rem; // top-4
+    right: 1rem; // right-4
+    background-color: #10b981; // bg-green-500
+    color: white;
+    padding: 0.75rem 1.5rem; // px-6 py-3
+    border-radius: 0.375rem; // rounded-md
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05); // shadow-lg
+    z-index: 50;
+    display: flex;
+    align-items: center;
+
+    svg {
+        width: 1.25rem; // w-5
+        height: 1.25rem; // h-5
+        margin-right: 0.5rem; // mr-2
+    }
+
+    button {
+        margin-left: 1rem; // ml-4
+        color: white;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+
+        &:focus {
+            outline: none;
+        }
+
+        svg {
+            width: 1rem; // w-4
+            height: 1rem; // h-4
+        }
+    }
+}
+
+// Product table
+.product-table-container {
+    width: 100%;
+}
+
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06); // shadow-md
+    border-radius: 0.5rem; // rounded-lg
+    overflow: hidden;
+
+    thead {
+        background-color: #1f2937; // bg-gray-800
+        color: white;
+
+        th {
+            padding: 0.75rem 1rem; // py-3 px-4
+            text-align: left;
+
+            &:first-child {
+                text-align: center;
+            }
+
+            &:nth-child(5) {
+                text-align: center;
+            }
+
+            &:last-child {
+                text-align: center;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            &:hover {
+                background-color: #f9fafb; // hover:bg-gray-50
+            }
+
+            td {
+                border-top: 1px solid #e5e7eb; // border-t border-gray-200
+                padding: 0.5rem 1rem; // px-4 py-2
+
+                &:first-child {
+                    text-align: center;
+                }
+
+                &:nth-child(5) {
+                    text-align: right;
+                }
+
+                &:last-child {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 0.5rem; // gap-2
+                }
+            }
+        }
+    }
+}
+
+// Action buttons
+.edit-button {
+    background-color: #3b82f6; // bg-blue-500
+    color: white;
+    font-size: 0.875rem; // text-sm
+    padding: 0.25rem 0.75rem; // py-1 px-3
+    border-radius: 0.25rem; // rounded
+    transition: background-color 150ms; // transition duration-150
+    text-decoration: none;
+    display: inline-block;
+
+    &:hover {
+        background-color: #2563eb; // bg-blue-600
+    }
+}
+
+.delete-button {
+    background-color: #ef4444; // bg-red-500
+    color: white;
+    font-size: 0.875rem; // text-sm
+    padding: 0.25rem 0.75rem; // py-1 px-3
+    border-radius: 0.25rem; // rounded
+    transition: background-color 150ms; // transition duration-150
+    cursor: pointer;
+    border: none;
+
+    &:hover {
+        background-color: #dc2626; // bg-red-600
+    }
+}
+
+.inline {
+    display: inline;
+}
